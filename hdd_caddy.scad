@@ -5,8 +5,8 @@ $hhdWidth = 102.5;
 
 // Base Plate
 $baseHeight_mm = 1;
-$baseLength_mm = 136 - 5 - 5; // 125.73;
-$baseWidth_mm = 115.5; // 115;
+$baseLength_mm = 136 - 5 - 5;
+$baseWidth_mm = 115.5;
 // Base Plate holes
 $baseHoleWidth_mm = 37;
 $baseHoleLength_mm = 52;
@@ -27,16 +27,16 @@ $railNotchLength = $railLength_mm - 8;
 $railNotchWidth = $railWidth_mm - 1;
 
 // HDD hole locations starting from the back
-$holeXAxisOffset_mm = 18; //12.5;
+$holeXAxisOffset_mm = 18;
 $holeHeightOffset = $baseHeight_mm + 6;
-$holeDiameter_mm = 4; //3.86;
+$holeDiameter_mm = 4;
 
 $holeOne = $holeXAxisOffset_mm + 0;
 $holeTwo = $holeXAxisOffset_mm + 37 + $holeDiameter_mm;
 $holeThree = $holeXAxisOffset_mm + 97 + $holeDiameter_mm;
 
 // Triangle Clip
-$clipXOffset = $baseLength_mm + 7.4 + 4.8; //6.4;
+$clipXOffset = $baseLength_mm + 7.4 + 4.8;
 $clipHeight = 6.4;
 $clipLength = 4.45;
 $clipWidth = 1.5;
@@ -44,18 +44,11 @@ $clipWidth = 1.5;
 
 // Draw the base unit and next draw the clip and lever
 union() {
-    /*translate([0,$railWidth_mm,$railHeight_mm + 3]) {
-        cube([5,$baseWidth_mm - ($baseWidth_mm - $hhdWidth),$baseHeight_mm]);
-        echo($baseWidth_mm - ($baseWidth_mm - $hhdWidth));
-        echo($railWidth_mm);
-    }*/
-    echo($holeHeightOffset);
-    echo($railHeight_mm);
     // Draw the base plate
     difference() {
         // Base Cube
         cube([$baseLength_mm,$baseWidth_mm,$baseHeight_mm]);
-        //cube([$baseLength_mm,($railWidth_mm*0.6),$baseHeight_mm/2]);
+        
         // The holes in the base plate
         firstBaseHoles();
         secondBaseHoles();
