@@ -6,7 +6,7 @@ $hhdWidth = 102.5;
 // Base Plate
 $baseHeight_mm = 1;
 $baseLength_mm = 136 - 5 - 5; // 125.73;
-$baseWidth_mm = 116; // 115;
+$baseWidth_mm = 115.5; // 115;
 // Base Plate holes
 $baseHoleWidth_mm = 37;
 $baseHoleLength_mm = 52;
