@@ -1,7 +1,7 @@
 include <shape_trapezium.scad>;
 
-// Hard Drive Width
-$hhdWidth = 102;
+// Hard Drive Width plus a bit of tolerance
+$hhdWidth = 102.15;
 
 // Base Plate
 $baseHeight_mm = 1;
